@@ -14,8 +14,12 @@ To compile the source file `mlkem_vs_rsa.c`, run:
 
 ```bash
 gcc mlkem_vs_rsa.c -o out -loqs -lcrypto -lpthread
+```
 
-After compiling, run the program by typing: ./out
+After compiling, run the program by typing:
+```bash
+./out
+```
 
 
 
