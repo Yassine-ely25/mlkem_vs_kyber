@@ -77,7 +77,7 @@ int main() {
     BIGNUM *bn = BN_new();
     BN_set_word(bn, RSA_F4); // Public exponent 65537
     unsigned char plaintext_rsa[32]; // AES-256 Key = 32 Bytes
-    unsigned char ciphertext_rsa[256]; // RSA ciphertext size is fixed: 256 bytes for a 2048-bit key (and does not depend on the plaintext's size)
+    unsigned char ciphertext_rsa[256]; // RSA ciphertext size is fixed: 256 bytes for a 2048-bit key
     unsigned char decrypted_rsa[256];
 
     double total_rsa_keygen = 0, total_rsa_enc = 0, total_rsa_dec = 0;
