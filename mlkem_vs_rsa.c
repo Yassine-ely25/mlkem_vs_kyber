@@ -110,16 +110,6 @@ int main() {
     printf("RSA-2048 Encryption average time (%d runs): %.3f ms\n", N_RUNS, total_rsa_enc / N_RUNS);
     printf("RSA-2048 Decryption average time (%d runs): %.3f ms\n", N_RUNS, total_rsa_dec / N_RUNS);
 
-
-    printf("RSA space memory: \n");
-
-    const BIGNUM *n = NULL, *e = NULL, *d = NULL;
-    RSA_get0_key(rsa, &n, &e, &d);
-    printf("RSA Public key (modulus size): %d bytes\n", RSA_size(rsa));
-    printf("RSA Private key (private exponent size): %d bytes\n", BN_num_bytes(d));
-    printf("RSA Ciphertext size: %d bytes\n", RSA_size(rsa));
-
-
     // Cleanup RSA
     RSA_free(rsa);
     BN_free(bn);
